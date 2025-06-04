@@ -47,3 +47,19 @@ Creates cards_<year>.csv and, when >1 year, a combined cards_all.csv.
 
 tweaked
 
+
+All-pages, no-image just url , maxed-out version
+
+
+
+Copy
+python scraper.py 1979-1982 --delay 0.5 --combined
+Streams every page until eBay has nothing left (override with --max-pages N).
+
+Saves per-year CSVs under ./output/ and, if --combined, a master cards_all.csv.
+
+Columns: year | title | player | grade | card_no | item_url | gallery_url.
+
+No images touched.
+
+Handles network errors with automatic retries; CTRL-C exits cleanly.
